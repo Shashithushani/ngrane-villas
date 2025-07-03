@@ -1,3 +1,9 @@
+import HeaderNav from "./components/header";
+
 export default function Home() {
-  return <h1>Hello Next</h1>;
+  return (
+    <div>
+      <HeaderNav />
+    </div>
+  );
 }

@@ -11,23 +11,13 @@ export default function Checkbox() {
     <div className="bg-white p-6 rounded-2xl shadow-xl max-w-8xl mx-auto mt-12">
       <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
         {/* Arrival */}
-        {/* <div>
-          <label className="block text-sm font-medium text-black mb-1">
-            Arrival
-          </label>
-          <input
-            type="date"
-            value={arrival}
-            onChange={(e) => setArrival(e.target.value)}
-            className="w-full border border-gray-300 text-gray-500 rounded-lg px-3 py-2"
-          />
-        </div> */}
+
         <div>
           <label className="block text-sm font-medium text-black mb-1">
             Arrival
           </label>
           <input
-            type="text"
+            type="date"
             className="hs-datepicker block w-full border border-gray-300 text-gray-700 rounded-lg px-3 py-2"
             placeholder="Select arrival date"
             data-hs-datepicker
@@ -36,23 +26,13 @@ export default function Checkbox() {
         </div>
 
         {/* Departure */}
-        {/* <div>
-          <label className="block text-sm font-medium text-black mb-1">
-            Departure
-          </label>
-          <input
-            type="date"
-            value={departure}
-            onChange={(e) => setDeparture(e.target.value)}
-            className="w-full border border-gray-300 text-gray-500 rounded-lg px-3 py-2"
-          />
-        </div> */}
+
         <div>
           <label className="block text-sm font-medium text-black mb-1">
             Departure
           </label>
           <input
-            type="text"
+            type="date"
             className="hs-datepicker block w-full border border-gray-300 text-gray-700 rounded-lg px-3 py-2"
             placeholder="Select departure date"
             data-hs-datepicker

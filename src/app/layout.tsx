@@ -24,6 +24,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      {/* layout.tsx or _document.tsx */}
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://unpkg.com/preline@1.7.0/dist/preline.css"
+        />
+        {/* <script
+          src="https://unpkg.com/preline@1.7.0/dist/preline.js"
+          defer
+        ></script> */}
+      </head>
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

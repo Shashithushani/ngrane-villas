@@ -2,6 +2,7 @@ import Image from "next/image";
 import HeaderNav from "../components/header";
 import Footer from "../components/footer";
 import Services from "../components/services";
+import Link from "next/link";
 
 export default function AboutUs() {
   return (
@@ -10,7 +11,7 @@ export default function AboutUs() {
       <div className="h-80 bg-[url('/images/villas-lobby.jpg')] bg-cover bg-center flex items-center justify-center">
         <div className="text-center bg-opacity-50 p-8 rounded-lg">
           <div className="text-white">
-            <h1 className="text-6xl font-bold mb-4">About us</h1>
+            <h1 className="text-6xl font-bold mb-4">About Us</h1>
             <p className="text-xl mb-4">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry.
@@ -57,6 +58,11 @@ export default function AboutUs() {
             pharetra nisi dolor, dignissim mattis mauris iaculis vitae.
           </p>
           <p>Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
+          <Link href="/about-us">
+            <button className="bg-black w-1/6 hover:bg-cyan-700 text-center text-white font-semibold mt-4 py-3 px-4 rounded shadow">
+              About us
+            </button>
+          </Link>
         </div>
       </div>
       <div className="mt-20">

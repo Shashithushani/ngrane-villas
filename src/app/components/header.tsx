@@ -8,7 +8,6 @@ export default function HeaderNav() {
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-        {/* Logo or Brand */}
         <div className="text-xl font-bold text-black">
           <Link href="/">
             The<span className="italic">Villas</span>
@@ -56,13 +55,56 @@ export default function HeaderNav() {
               Home
             </Link>
           </li>
+          <div>
+            <li>
+              <div className="relative group">
+                <button className="hover:text-indigo-600 focus:outline-none flex items-center space-x-1">
+                  <span>About</span>
+                  <svg
+                    className="w-4 h-4 mt-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+
+                {/* Dropdown Menu */}
+                <div className="absolute left-0 mt-2 w-40 bg-white border rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible transition-opacity duration-200 z-50">
+                  <Link
+                    href="/about-us/"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    About page-2
+                  </Link>
+                  <Link
+                    href="/about-us2"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Our History
+                  </Link>
+                  <Link
+                    href="/about/mission"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Our Mission
+                  </Link>
+                </div>
+              </div>
+
+              {/* <Link href="/about" className="hover:text-indigo-600">
+                About
+              </Link> */}
+            </li>
+          </div>
           <li>
-            <Link href="/about" className="hover:text-indigo-600">
-              About
-            </Link>
-          </li>
-          <li>
-            <Link href="/our-villas" className="hover:text-indigo-600">
+            <Link href="/villas" className="hover:text-indigo-600">
               Our Villas
             </Link>
           </li>
@@ -144,7 +186,7 @@ export default function HeaderNav() {
       </nav>
 
       {/* Mobile Menu */}
-      {isOpen && (
+      {/* {isOpen && (
         <div className="md:hidden px-4 pb-4">
           <ul className="space-y-4 text-black font-medium">
             <li>
@@ -194,7 +236,7 @@ export default function HeaderNav() {
             </li>
           </ul>
         </div>
-      )}
+      )} */}
     </header>
   );
 }

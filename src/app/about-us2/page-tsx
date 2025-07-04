@@ -1,0 +1,19 @@
+// import Image from "next/image";
+// import HeaderNav from "../components/header"; // Adjust if path is different
+
+// export default function About() {
+//   return (
+//     <div>
+//       <HeaderNav />
+//       <div className="h-80 bg-[url('/images/villas-lobby.jpg')] bg-cover bg-center flex items-center justify-center">
+//         <div className="text-center bg-opacity-50 p-8 rounded-lg">
+//           <div className="text-white">
+//             <h1 className="text-6xl font-bold mb-4">About Us</h1>
+//             {/* Optional paragraph below */}
+//             {/* <p className="text-xl mb-4">Your subtitle or description here.</p> */}
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }

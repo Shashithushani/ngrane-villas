@@ -6,7 +6,7 @@ import Footer from "./components/footer";
 import Link from "next/link";
 import Services from "./components/services";
 import { useVillas } from "./components/VillaDataProvider";
-import VillaCardComponent from "./components/VillaCardComponent";
+import VillaCard from "./components/VillaCard";
 
 export default function Home() {
   const allVillas = useVillas();
@@ -50,7 +50,7 @@ export default function Home() {
         <div className="flex space-x-30">
           {villas.map((villa) => (
             <div key={villa.id} className="border rounded-lg p-6 shadow w-120">
-              <VillaCardComponent villa={villa} />
+              <VillaCard villa={villa} />
             </div>
           ))}
         </div>

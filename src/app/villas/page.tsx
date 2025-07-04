@@ -1,9 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
 import Checkbox from "../components/checkbox";
 import HeaderNav from "../components/header";
-import OurVillas from "../components/villaCard";
-import NotAvailable from "../components/notAvailable";
 import Footer from "../components/footer";
 
 export default function Villas() {
@@ -35,7 +32,6 @@ export default function Villas() {
           it over 2000 years old.
         </p>
       </div>
-      <OurVillas />
       <div className="mt-10">
         <h1 className="text-center text-2xl text-black">
           Not available properties
@@ -44,8 +40,6 @@ export default function Villas() {
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry
         </p>
-
-        <NotAvailable />
       </div>
       <div>
         <div className="h-142 bg-[url('/images/villa-8.jpg')] bg-cover bg-center flex items-center justify-start">

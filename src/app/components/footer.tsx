@@ -15,9 +15,9 @@ export default function Footer() {
         <div>
           <h1>THEVILLAS CONTACTS</h1>
           <ul>
-            <li>info@thevillas.it</li>
-            <li>+3922222222</li>
-            <li>Loren Ipsum dolor sit</li>
+            <li>📧 info@thevillas.it</li>
+            <li>📞 +3922222222</li>
+            <li>📍 Loren Ipsum dolor sit</li>
           </ul>
         </div>
         <div>
@@ -36,6 +36,12 @@ export default function Footer() {
             <li>Cookie policy</li>
           </ul>
         </div>
+      </div>
+      <hr className="border-t-2 border-gray-300 my-10 w-3/4 mx-auto" />
+      <div className="text-black flex flex-col items-center text-center">
+        <p>© 2025 dcdggttfg bshsuhus xxxxxx</p>
+
+        <p>Powered by Weekend CMS - Emergento</p>
       </div>
     </footer>
   );

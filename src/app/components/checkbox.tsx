@@ -1,7 +1,13 @@
 "use client";
 import { useState } from "react";
+import { useVillas } from "./VillaDataProvider";
 
 export default function Checkbox() {
+  const allVillas = useVillas();
+  const destinations = [
+    ...new Map(allVillas.map((villa) => [villa.city.id, villa.city])).values(),
+  ];
+
   const [arrival, setArrival] = useState("");
   const [departure, setDeparture] = useState("");
   const [destination, setDestination] = useState("");
@@ -46,14 +52,19 @@ export default function Checkbox() {
             Destination
           </label>
           <select
+            id="destinationSelect"
             value={destination}
             onChange={(e) => setDestination(e.target.value)}
             className="w-full border border-gray-300 text-gray-500  rounded-lg px-3 py-2"
           >
-            <option>Choose a destination</option>
-            <option>Palermo</option>
-            <option>Trapani</option>
-            <option>Pantelleria</option>
+            <option value="" disabled>
+              Choose a destination
+            </option>
+            {destinations.map((dest) => (
+              <option key={dest.id} value={dest.name}>
+                {dest.name}
+              </option>
+            ))}
           </select>
         </div>
 

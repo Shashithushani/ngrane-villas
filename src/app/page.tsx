@@ -1,42 +1,17 @@
+"use client";
 import Image from "next/image";
 import HeaderNav from "./components/header";
 import Checkbox from "./components/checkbox";
 import Footer from "./components/footer";
 import Link from "next/link";
 import Services from "./components/services";
-
-// import VillaCard from "./components/villaCard";
+import { useVillas } from "./components/VillaDataProvider";
+import VillaCardComponent from "./components/VillaCardComponent";
 
 export default function Home() {
-  const villas = [
-    {
-      image: "/images/villa-1.jpg",
-      id: 1,
-      name: "Villa Olimpus",
-      guests: 6,
-      bedrooms: 3,
-      bathrooms: 2,
-      price: 245,
-    },
-    {
-      image: "/images/villa-2.jpg",
-      id: 2,
-      name: "Villa Zeus",
-      guests: 6,
-      bedrooms: 3,
-      bathrooms: 2,
-      price: 245,
-    },
-    {
-      image: "/images/villa-3.jpg",
-      id: 3,
-      name: "Villa Athena",
-      guests: 6,
-      bedrooms: 3,
-      bathrooms: 2,
-      price: 245,
-    },
-  ];
+  const allVillas = useVillas();
+  const villas = allVillas.slice(0, 3); // Show only a sample of 3 hotels in the landing page
+
   return (
     <div>
       <HeaderNav />
@@ -75,26 +50,7 @@ export default function Home() {
         <div className="flex space-x-30">
           {villas.map((villa) => (
             <div key={villa.id} className="border rounded-lg p-6 shadow w-120">
-              <Image
-                src={villa.image}
-                alt={villa.name}
-                width={450}
-                height={340}
-              />
-              <h2 className="text-xl text-black font-bold mb-2">
-                {villa.name}
-              </h2>
-              <div className="flex justify-center p-6 space-x-18 text-black">
-                <p className="mb-1">👥 : {villa.guests}</p>
-                <p className="mb-1">🛏️ : {villa.bedrooms}</p>
-                <p className="mb-1">🛁 : {villa.bathrooms}</p>
-              </div>
-
-              <p className="mt-4 font-semibold text-black ">
-                Starting at{" "}
-                <span className="text-right text-black">{villa.price}€</span> /
-                night
-              </p>
+              <VillaCardComponent villa={villa} />
             </div>
           ))}
         </div>
@@ -108,7 +64,7 @@ export default function Home() {
       <div className="flex items-stretch bg-gray-100 mb-10">
         <div className="flex justify-start pr-4 pl-20 py-10 w-1/2">
           <Image
-            src="/images/villa-4.jpg" // relative to /public folder
+            src="/images/villa-4.jpg"
             alt="Villa"
             width={600}
             height={400}

@@ -40,7 +40,7 @@ export default function Home() {
   return (
     <div>
       <HeaderNav />
-      {/* <DatepickerClient /> */}
+
       <div className="h-162 bg-[url('/images/villa-rentals.jpg')] bg-cover bg-center flex items-center justify-center">
         <div className="text-center bg-opacity-50 p-8 rounded-lg">
           <div className="text-white">

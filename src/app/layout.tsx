@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -30,10 +31,8 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://unpkg.com/preline@1.7.0/dist/preline.css"
         />
-        {/* <script
-          src="https://unpkg.com/preline@1.7.0/dist/preline.js"
-          defer
-        ></script> */}
+        <script src="./assets/vendor/lodash/lodash.min.js"></script>
+        <script src="./assets/vendor/vanilla-calendar-pro/index.js"></script>
       </head>
 
       <body

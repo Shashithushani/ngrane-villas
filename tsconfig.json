@@ -21,7 +21,6 @@
         "name": "next"
       }
     ],
-    "types": ["preline"],
 
     "paths": {
       "@/*": ["./src/*"]

@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-sync-scripts */
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "./global.css";
 import { VillaDataProvider } from "./components/VillaDataProvider";
 import { getVillas } from "./lib/getVillas";
 
@@ -30,15 +30,7 @@ export default async function RootLayout({
   return (
     <VillaDataProvider data={villas}>
       <html lang="en">
-        {/* layout.tsx or _document.tsx */}
-        <head>
-          <link
-            rel="stylesheet"
-            href="https://unpkg.com/preline@1.7.0/dist/preline.css"
-          />
-          <script src="./assets/vendor/lodash/lodash.min.js"></script>
-          <script src="./assets/vendor/vanilla-calendar-pro/index.js"></script>
-        </head>
+        <head></head>
 
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}

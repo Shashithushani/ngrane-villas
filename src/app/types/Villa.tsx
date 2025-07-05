@@ -5,6 +5,7 @@ export interface Amenity {
 }
 
 export interface Media {
+  id: Key | null | undefined;
   url: string;
   isMain: boolean;
   position: number;

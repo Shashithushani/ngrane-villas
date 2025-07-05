@@ -2,3 +2,4 @@
 
 /* Plugins */
 @plugin "@tailwindcss/forms";
+@import "react-datepicker/dist/react-datepicker.css";

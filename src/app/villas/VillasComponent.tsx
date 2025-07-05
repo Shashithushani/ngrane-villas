@@ -77,7 +77,7 @@ export default function VillasComponent({
           </div>
         </div>
 
-        <div className="absolute left-1/2 bottom-[-40px] transform -translate-x-1/2 z-20">
+        <div className=" left-1/2 bottom-[-40px] mt-40 transform -translate-x-1/2 z-20">
           <Checkbox />
         </div>
       </div>
@@ -91,17 +91,14 @@ export default function VillasComponent({
         </p>
       </div>
 
-      <div className="mt-10">
+      <div className="mt-10 px-20">
         <h1 className="text-center text-2xl text-black">
           Available properties
         </h1>
-        <div className="flex justify-start pl-20">
-          <div className="flex space-x-30">
+        <div className="px-10 mt-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {availableVillas.map((villa) => (
-              <div
-                key={villa.id}
-                className="border rounded-lg p-6 shadow w-120"
-              >
+              <div key={villa.id} className="rounded-lg p-6 shadow w-120">
                 <VillaCard villa={villa} />
               </div>
             ))}
@@ -109,17 +106,14 @@ export default function VillasComponent({
         </div>
       </div>
 
-      <div className="mt-10">
+      <div className="mt-10 px-20">
         <h1 className="text-center text-2xl text-black">
           Not available properties
         </h1>
-        <div className="flex justify-start pl-20">
-          <div className="flex space-x-30">
+        <div className="px-10 mt-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {unavailableVillas.map((villa) => (
-              <div
-                key={villa.id}
-                className="border rounded-lg p-6 shadow w-120"
-              >
+              <div key={villa.id} className="rounded-lg p-6 shadow w-120">
                 <VillaCard villa={villa} />
               </div>
             ))}

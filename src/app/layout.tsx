@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./global.css";
 import { VillaDataProvider } from "./components/VillaDataProvider";
 import { getVillas } from "./lib/getVillas";
+import "leaflet/dist/leaflet.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

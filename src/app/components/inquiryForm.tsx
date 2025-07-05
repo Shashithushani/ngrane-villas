@@ -25,12 +25,11 @@ export default function InquiryForm() {
 
     try {
       const result = await emailjs.send(
-        "YOUR_SERVICE_ID", // e.g. "service_abc123"
-        "YOUR_TEMPLATE_ID", // e.g. "template_xyz789"
+        "service_lzf1tjm",
+        "template_e24x2sl",
         data,
-        "YOUR_USER_ID" // public key
+        "d-UdoeJwZcqcbhwTa"
       );
-      console.log(result.text);
       setIsSubmitted(true);
       reset();
       setArrivalDate(null);
@@ -44,7 +43,7 @@ export default function InquiryForm() {
     <div className="max-w-xl mx-auto p-6 bg-white rounded-lg shadow-md">
       {isSubmitted ? (
         <div className="text-green-600 text-center">
-          ✅ Your inquiry has been sent successfully!
+          Your inquiry has been sent successfully!
         </div>
       ) : (
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">

@@ -114,7 +114,7 @@ export default function HeaderNav() {
             </Link>
           </li>
           <li>
-            <Link href="/contacts" className="hover:text-indigo-600">
+            <Link href="/contact-us" className="hover:text-indigo-600">
               Contacts
             </Link>
           </li>

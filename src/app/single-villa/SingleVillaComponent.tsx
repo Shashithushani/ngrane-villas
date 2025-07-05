@@ -15,10 +15,6 @@ export default function SingleVillaComponent({ villaId }: SingleVillaProps) {
   const allVillas = useVillas();
   const villa = allVillas.find((e) => e.id == villaId);
 
-  console.log("-------");
-  console.log(villa.media);
-  console.log("-------");
-
   return (
     <div className="pl-20">
       <div>

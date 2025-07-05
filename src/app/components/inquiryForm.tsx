@@ -40,7 +40,7 @@ export default function InquiryForm() {
   };
 
   return (
-    <div className="max-w-xl mx-auto p-6 bg-white rounded-lg shadow-md">
+    <div className="max-w-xl mt-10 mb-10 mx-auto p-6 bg-white rounded-lg shadow-md">
       {isSubmitted ? (
         <div className="text-green-600 text-center">
           Your inquiry has been sent successfully!

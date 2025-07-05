@@ -27,8 +27,8 @@ export default function MiniMap({
   latitude,
   longitude,
   zoom = 13,
-  width = "200px",
-  height = "150px",
+  width = "400px",
+  height = "400px",
 }: MiniMapProps) {
   return (
     <MapContainer

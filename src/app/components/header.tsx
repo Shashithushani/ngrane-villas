@@ -81,7 +81,7 @@ export default function HeaderNav() {
                     href="/about-us/"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
-                    About page-2
+                    About
                   </Link>
                   <Link
                     href="/about-us2"
